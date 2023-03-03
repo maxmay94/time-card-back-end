@@ -11,6 +11,7 @@ const index = async(req, res) => {
 }
 
 const create = async(req, res) => {
+  // console.log(req.body)
   try {
     const project = await Project.create(req.body)
     res.status(201).json(project)
@@ -20,15 +21,15 @@ const create = async(req, res) => {
   }
 }
 
-const update = async(req, res) => {
+// const update = async(req, res) => {
 
-}
+// }
 
-const deleteOne = async(req, res) => { }
+// const deleteOne = async(req, res) => { }
 
 export { 
   index, 
   create, 
-  update, 
-  deleteOne as delete 
+  // update, 
+  // deleteOne as delete 
 }
