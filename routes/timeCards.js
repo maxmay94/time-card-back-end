@@ -1,8 +1,10 @@
 import { Router } from 'express'
-import * as profilesCtrl from '../controllers/profiles.js'
+import * as timeCardsCtrl from '../controllers/timeCards.js'
 import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const { decodeUserFromToken, checkAuth } = middleware
+
+const router = Router()
 
 /*---------- Public Routes ----------*/
 

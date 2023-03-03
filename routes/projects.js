@@ -1,8 +1,11 @@
 import { Router } from 'express'
-import * as profilesCtrl from '../controllers/profiles.js'
+import * as projectsCtrl from '../controllers/projects.js'
 import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const { decodeUserFromToken, checkAuth } = middleware
+
+const router = Router()
+
 
 /*---------- Public Routes ----------*/
 
