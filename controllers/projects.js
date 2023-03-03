@@ -21,15 +21,15 @@ const create = async(req, res) => {
   }
 }
 
-// const update = async(req, res) => {
+const update = async(req, res) => {
 
-// }
+}
 
-// const deleteOne = async(req, res) => { }
+const deleteOne = async(req, res) => { }
 
 export { 
   index, 
   create, 
-  // update, 
-  // deleteOne as delete 
+  update, 
+  deleteOne as delete 
 }

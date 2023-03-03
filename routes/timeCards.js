@@ -10,7 +10,7 @@ const router = Router()
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, timeCardsCtrl.index)
 router.post('/', checkAuth, timeCardsCtrl.create)
-// router.patch('/:id', checkAuth, timeCardsCtrl.update)
-// router.delete('/:id', checkAuth, timeCardsCtrl.delete)
+router.patch('/:id', checkAuth, timeCardsCtrl.update)
+router.delete('/:id', checkAuth, timeCardsCtrl.delete)
 
 export { router }
