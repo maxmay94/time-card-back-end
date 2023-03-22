@@ -23,7 +23,15 @@ const create = async(req, res) => {
 
 const update = async(req, res) => { }
 
-const deleteOne = async(req, res) => { }
+const deleteOne = async(req, res) => { 
+  try{
+    await Project.findByIdAndDelete(req.params.id)
+    res.status(200).json({msg: 'Project deleted'}).end()
+  } catch(err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+}
 
 export {
   index, 
