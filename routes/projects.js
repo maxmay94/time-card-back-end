@@ -7,10 +7,10 @@ const router = Router()
 
 /*---------- Public Routes ----------*/
 
+router.get('/:id', projectsCtrl.index)
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
-router.get('/', checkAuth, projectsCtrl.index)
 router.post('/', checkAuth, projectsCtrl.create)
 router.patch('/:id', checkAuth, projectsCtrl.update)
 router.delete('/:id', checkAuth, projectsCtrl.delete)
