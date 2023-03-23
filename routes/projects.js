@@ -12,6 +12,8 @@ router.get('/:id', projectsCtrl.index)
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, projectsCtrl.create)
+router.post('/clock-in/:id', checkAuth, projectsCtrl.clockIn)
+router.post('/clock-out/:id', checkAuth, projectsCtrl.clockOut)
 router.patch('/:id', checkAuth, projectsCtrl.update)
 router.delete('/:id', checkAuth, projectsCtrl.delete)
 
